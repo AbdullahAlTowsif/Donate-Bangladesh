@@ -38,7 +38,7 @@
         <nav class="container mx-auto">
             <div class="navbar">
                 <div class="navbar-start">
-                    <a class="btn btn-ghost text-xl bg-primary-color text-head-color">Blog</a>
+                    <a id="btn-toggle" class="btn btn-ghost text-xl bg-primary-color text-head-color">Home</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <img class="border-2 border-dashed" src="assets/logo.png" alt="">
@@ -51,7 +51,44 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main class="container lg:mx-auto px-2 mt-7">
+        <div class="flex items-center mb-7">
+            <h1 class="text-4xl font-bold">Important FAQ</h1>
+            <p class="text-4xl pl-3"><i class="fa-regular fa-comment"></i></p>
+        </div>
+        <div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for web documents that represents the structure of a webpage as a tree of objects, allowing scripts to manipulate its content and style.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can select an element from the DOM using methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName().</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element to handle events on its child elements, improving performance and simplifying event management.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can manipulate an element's attributes using setAttribute() or removeAttribute() and its styles by modifying the element.style property in the DOM.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer></footer>
     <script src="js/index.js"></script>
 </body>
