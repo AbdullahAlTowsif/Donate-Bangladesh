@@ -81,6 +81,8 @@
                     those in need.</p>
                 <div class="flex flex-col space-y-4">
                     <input class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
+                    <!-- Error Message -->
+                    <p id="" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
                     <button class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                 </div>
             </div>
@@ -103,6 +105,8 @@
                     to assist those in urgent need.</p>
                 <div class="flex flex-col space-y-4">
                     <input class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
+                    <!-- Error Message -->
+                    <p id="" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
                     <button class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                 </div>
             </div>
@@ -125,10 +129,33 @@
                     Please consider making a donation to support these brave individuals in their time of need.</p>
                 <div class="flex flex-col space-y-4">
                     <input class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
+                    <!-- Error Message -->
+                    <p id="" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
                     <button class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                 </div>
             </div>
         </div>
+        <!-- History Add Section -->
+        <div id="history-section" class="hidden justify-center items-center">
+            <div class="container mx-auto text-center p-8 border rounded-xl">
+                <div class="space-y-2 max-w-6xl"></div>
+            </div>
+        </div>
+        <!-- Modal Section -->
+        <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box px-5 py-10 flex flex-col justify-center items-center">
+                <h3 class="font-bold text-2xl text-head-color my-5">Congrates!</h3>
+                <div class="text-center">
+                    <img src="assets/coin.png" alt="">
+                    <p class="font-bold">You Have Donated for Humankind</p>
+                    <h3 class="font-bold text-xl text-head-color my-5">Successfully</h3>
+                </div>
+                <button id="btn-continue"
+                    class="btn bg-gray-400 px-16 btn-md hover:bg-black transition-colors ease-in duration-300 text-head-color">
+                    Close Confirmation
+                </button>
+            </form>
+        </dialog>
     </main>
     <footer class="bg-nav-color h-40"></footer>
     <script src="js/index.js"></script>
