@@ -1,3 +1,8 @@
+// a common function to get value by id
+function getValueById(id){
+    return document.getElementById(id);
+}
+
 // changing the pages
 document.getElementById('btn-toggle').addEventListener('click', function(event) {
     event.preventDefault();
@@ -9,30 +14,30 @@ document.getElementById('btn-toggle').addEventListener('click', function(event) 
 });
 
 // get all the attr by id
-const historyTab = document.getElementById('btn-history');
-const donationTab = document.getElementById('btn-donation');
-const fullForm = document.getElementById('full-form');
-const footer = document.getElementById('empty-footer');
-const historySection = document.getElementById('history-section');
+// const historyTab = document.getElementById('btn-history');
+const historyTab = getValueById('btn-history');
+const donationTab = getValueById('btn-donation');
+const fullForm = getValueById('full-form');
+const footer = getValueById('empty-footer');
+const historySection = getValueById('history-section');
 
 // total amount
-const totalBalance = document.getElementById('account-balance');
+const totalBalance = getValueById('account-balance');
 
 
 let sum = 0;
 let updatedBalance = 0;
 
-// input fields buttons
 
 // 1st card
-const buttonNoakhali = document.getElementById('btn-noakhali');
+const buttonNoakhali = getValueById('btn-noakhali');
 buttonNoakhali.addEventListener('click', function(event){
     event.preventDefault();
-    const N_Donation = parseFloat(document.getElementById('noakhali-donate-field').value);
-    const noakhaliTotalDonate = document.getElementById('noakhali-amount');
+    const N_Donation = parseFloat(getValueById('noakhali-donate-field').value);
+    const noakhaliTotalDonate = getValueById('noakhali-amount');
     const noakhaliTotalDonateValue = parseFloat(noakhaliTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const my_modal = document.getElementById('my_modal_1');
+    const my_modal = getValueById('my_modal_1');
 
     if(N_Donation > totalBalanceValue || isNaN(N_Donation) || N_Donation < 0){
         alert('Invalid Donation Amount');
@@ -60,14 +65,14 @@ buttonNoakhali.addEventListener('click', function(event){
 });
 
 // 2nd card
-const buttonFeni = document.getElementById('btn-feni');
+const buttonFeni = getValueById('btn-feni');
 buttonFeni.addEventListener('click', function(event){
     event.preventDefault();
-    const F_Donation = parseFloat(document.getElementById('feni-donate-field').value);
-    const feniTotalDonate = document.getElementById('feni-amount');
+    const F_Donation = parseFloat(getValueById('feni-donate-field').value);
+    const feniTotalDonate = getValueById('feni-amount');
     const feniTotalDonateValue = parseFloat(feniTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const my_modal = document.getElementById('my_modal_1');
+    const my_modal = getValueById('my_modal_1');
 
     if(F_Donation > totalBalanceValue || isNaN(F_Donation) || F_Donation < 0){
         alert('Invalid Donataion Amount');
@@ -97,14 +102,14 @@ buttonFeni.addEventListener('click', function(event){
 });
 
 // 3rd card
-const buttonQuota = document.getElementById('btn-quota');
+const buttonQuota = getValueById('btn-quota');
 buttonQuota.addEventListener('click', function(event){
     event.preventDefault();
-    const Q_Donation = parseFloat(document.getElementById('quota-donate-field').value);
-    const quotaTotalDonate = document.getElementById('quota-amount');
+    const Q_Donation = parseFloat(getValueById('quota-donate-field').value);
+    const quotaTotalDonate = getValueById('quota-amount');
     const quotaTotalDonateValue = parseFloat(quotaTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const my_modal = document.getElementById('my_modal_1');
+    const my_modal = getValueById('my_modal_1');
 
     if(Q_Donation > totalBalanceValue || isNaN(Q_Donation) || Q_Donation < 0){
         alert('Invalid Donation Amount');
