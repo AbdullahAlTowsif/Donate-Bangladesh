@@ -1,6 +1,10 @@
-// a common function to get value by id
+// common function to get value by id
 function getValueById(id){
     return document.getElementById(id);
+}
+
+function addHidden(id){
+    document.getElementById(id).classList.add('hidden');
 }
 
 // changing the pages
@@ -41,7 +45,7 @@ buttonNoakhali.addEventListener('click', function(event){
 
     if(N_Donation > totalBalanceValue || isNaN(N_Donation) || N_Donation < 0){
         alert('Invalid Donation Amount');
-        my_modal.classList.add('hidden');
+        addHidden('my_modal_1');
         window.location.reload();
         return;
     }
@@ -76,7 +80,7 @@ buttonFeni.addEventListener('click', function(event){
 
     if(F_Donation > totalBalanceValue || isNaN(F_Donation) || F_Donation < 0){
         alert('Invalid Donataion Amount');
-        my_modal.classList.add('hidden');
+        addHidden('my_modal_1');
         window.location.reload();
         return;
     }
@@ -113,7 +117,7 @@ buttonQuota.addEventListener('click', function(event){
 
     if(Q_Donation > totalBalanceValue || isNaN(Q_Donation) || Q_Donation < 0){
         alert('Invalid Donation Amount');
-        my_modal.classList.add('hidden');
+        addHidden('my_modal_1');
         window.location.reload();
         return;
     }    
@@ -151,8 +155,8 @@ historyTab.addEventListener('click', function(){
     donationTab.classList.add('bg-white', 'text-secondary-color');
     donationTab.classList.remove('bg-primary-color', 'text-head-color');
 
-    fullForm.classList.add('hidden');
-    footer.classList.add('hidden');
+    addHidden('full-form');
+    addHidden('empty-footer');
     historySection.classList.remove('hidden');
 
 });
@@ -167,6 +171,6 @@ donationTab.addEventListener('click', function(){
 
     fullForm.classList.remove('hidden');
     footer.classList.remove('hidden');
-    historySection.classList.add('hidden');
+    addHidden('history-section');
 
 });
