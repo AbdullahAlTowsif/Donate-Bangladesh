@@ -31,12 +31,18 @@ buttonNoakhali.addEventListener('click', function(event){
     const N_Donation = parseFloat(document.getElementById('noakhali-donate-field').value);
     const noakhaliTotalDonate = document.getElementById('noakhali-amount');
     const noakhaliTotalDonateValue = parseFloat(noakhaliTotalDonate.innerText);
+    const totalBalanceValue = parseFloat(totalBalance.innerText);
+    const errorNoakhali = document.getElementById('error-noakhali');
+
+    if(N_Donation > totalBalanceValue || isNaN(N_Donation) || N_Donation < 0){
+        errorNoakhali.classList.remove('hidden');
+        return;
+    }
     sum = noakhaliTotalDonateValue;
 
     sum+=N_Donation;
     noakhaliTotalDonate.innerText = sum;
 
-    const totalBalanceValue = parseFloat(totalBalance.innerText);
     updatedBalance = totalBalanceValue - N_Donation;
     totalBalance.innerText = updatedBalance;
     
@@ -58,12 +64,20 @@ buttonFeni.addEventListener('click', function(event){
     const F_Donation = parseFloat(document.getElementById('feni-donate-field').value);
     const feniTotalDonate = document.getElementById('feni-amount');
     const feniTotalDonateValue = parseFloat(feniTotalDonate.innerText);
+    const totalBalanceValue = parseFloat(totalBalance.innerText);
+    const errorFeni = document.getElementById('error-feni');
+
+    if(F_Donation > totalBalanceValue || isNaN(F_Donation) || F_Donation < 0){
+        errorFeni.classList.remove('hidden');
+        return;
+    }
+
+
     sum = feniTotalDonateValue;
 
     sum+=F_Donation;
     feniTotalDonate.innerText = sum;
 
-    const totalBalanceValue = parseFloat(totalBalance.innerText);
     updatedBalance = totalBalanceValue - F_Donation;
     totalBalance.innerText = updatedBalance;
     
@@ -85,12 +99,20 @@ buttonQuota.addEventListener('click', function(event){
     const Q_Donation = parseFloat(document.getElementById('quota-donate-field').value);
     const quotaTotalDonate = document.getElementById('quota-amount');
     const quotaTotalDonateValue = parseFloat(quotaTotalDonate.innerText);
+    const totalBalanceValue = parseFloat(totalBalance.innerText);
+    const errorQuota = document.getElementById('error-quota');
+
+    if(Q_Donation > totalBalanceValue || isNaN(Q_Donation) || Q_Donation < 0){
+        errorQuota.classList.remove('hidden');
+        return;
+    }    
+
+
     sum = quotaTotalDonateValue;
 
     sum+=Q_Donation;
     quotaTotalDonate.innerText = sum;
 
-    const totalBalanceValue = parseFloat(totalBalance.innerText);
     updatedBalance = totalBalanceValue - Q_Donation;
     totalBalance.innerText = updatedBalance;
     
