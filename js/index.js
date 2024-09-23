@@ -32,10 +32,12 @@ buttonNoakhali.addEventListener('click', function(event){
     const noakhaliTotalDonate = document.getElementById('noakhali-amount');
     const noakhaliTotalDonateValue = parseFloat(noakhaliTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const errorNoakhali = document.getElementById('error-noakhali');
+    const my_modal = document.getElementById('my_modal_1');
 
     if(N_Donation > totalBalanceValue || isNaN(N_Donation) || N_Donation < 0){
-        errorNoakhali.classList.remove('hidden');
+        alert('Invalid Donation Amount');
+        my_modal.classList.add('hidden');
+        window.location.reload();
         return;
     }
     sum = noakhaliTotalDonateValue;
@@ -65,10 +67,12 @@ buttonFeni.addEventListener('click', function(event){
     const feniTotalDonate = document.getElementById('feni-amount');
     const feniTotalDonateValue = parseFloat(feniTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const errorFeni = document.getElementById('error-feni');
+    const my_modal = document.getElementById('my_modal_1');
 
     if(F_Donation > totalBalanceValue || isNaN(F_Donation) || F_Donation < 0){
-        errorFeni.classList.remove('hidden');
+        alert('Invalid Donataion Amount');
+        my_modal.classList.add('hidden');
+        window.location.reload();
         return;
     }
 
@@ -100,10 +104,12 @@ buttonQuota.addEventListener('click', function(event){
     const quotaTotalDonate = document.getElementById('quota-amount');
     const quotaTotalDonateValue = parseFloat(quotaTotalDonate.innerText);
     const totalBalanceValue = parseFloat(totalBalance.innerText);
-    const errorQuota = document.getElementById('error-quota');
+    const my_modal = document.getElementById('my_modal_1');
 
     if(Q_Donation > totalBalanceValue || isNaN(Q_Donation) || Q_Donation < 0){
-        errorQuota.classList.remove('hidden');
+        alert('Invalid Donation Amount');
+        my_modal.classList.add('hidden');
+        window.location.reload();
         return;
     }    
 
