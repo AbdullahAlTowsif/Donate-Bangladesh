@@ -57,7 +57,7 @@ buttonNoakhali.addEventListener('click', function(event){
     historyItem.className = 'space-y-4 max-w-6xl container mx-auto p-8 border rounded-xl mb-6';
     historyItem.innerHTML = `
     <h3 class="text-xl font-bold text-head-color">${N_Donation} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h3>
-    <p>Date: ${new Date().toString()}</p>
+    <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
     // const historyContainer = document.getElementById('add-history');
@@ -94,7 +94,7 @@ buttonFeni.addEventListener('click', function(event){
     historyItem.className = 'space-y-4 max-w-6xl container mx-auto p-8 border rounded-xl mb-6';
     historyItem.innerHTML = `
     <h3 class="text-xl font-bold text-head-color">${F_Donation} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
-    <p>Date: ${new Date().toString()}</p>
+    <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
     // const historyContainer = document.getElementById('add-history');
@@ -131,7 +131,7 @@ buttonQuota.addEventListener('click', function(event){
     historyItem.className = 'space-y-4 max-w-6xl container mx-auto p-8 border rounded-xl mb-6';
     historyItem.innerHTML = `
     <h3 class="text-xl font-bold text-head-color">${Q_Donation} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
-    <p>Date: ${new Date().toString()}</p>
+    <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
     // const historyContainer = document.getElementById('add-history');
