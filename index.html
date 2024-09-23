@@ -48,7 +48,7 @@
                     </div>
                     <div class="navbar-end">
                         <img class="pr-2" src="assets/coin.png" alt="">
-                        <p class="text-secondary-color text-xl font-semibold">5500 <span>BDT</span> </p>
+                        <p class="text-secondary-color text-xl font-semibold"><span id="account-balance">5500</span> <span>BDT</span> </p>
                     </div>
                 </div>
             </nav>
@@ -72,7 +72,7 @@
                 <div class="space-y-4 max-w-xl">
                     <div class="flex">
                         <img src="assets/coin.png" alt="">
-                        <p class="pl-2 text-secondary-color">0 <span>BDT</span></p>
+                        <p class="pl-2 text-secondary-color"><span id="noakhali-amount">0</span> <span>BDT</span></p>
                     </div>
                     <h3 class="text-xl font-bold text-head-color">Donate for Flood at Noakhali, Bangladesh</h3>
                     <p class="text-lg font-normal text-secondary-color"> The recent floods in Noakhali have caused
@@ -81,10 +81,10 @@
                         Please join us in supporting the relief efforts and making a positive impact on the lives of
                         those in need.</p>
                     <div class="flex flex-col space-y-4">
-                        <input class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
+                        <input id="noakhali-donate-field" class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
                         <!-- Error Message -->
                         <p id="" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
-                        <button class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
+                        <button id="btn-noakhali" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -142,10 +142,10 @@
             </div>
         </div>
         <!-- History Add Section -->
-        <div id="history-section" class="hidden justify-center items-center">
-            <div class="container mx-auto text-center p-8 border rounded-xl">
-                <div class="space-y-2 max-w-6xl"></div>
-            </div>
+        <div id="history-section" class="hidden items-center">
+            <!-- <div id="add-history" class="container mx-auto p-8 border rounded-xl"> -->
+                <!-- <div id="add-history" class="space-y-2 max-w-6xl"></div> -->
+            <!-- </div> -->
         </div>
         <!-- Modal Section -->
         <dialog id="my_modal_1" class="modal">
