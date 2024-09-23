@@ -84,7 +84,7 @@
                         <input id="noakhali-donate-field" class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
                         <!-- Error Message -->
                         <p id="error-noakhali" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
-                        <button id="btn-noakhali" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
+                        <button onclick="my_modal_1.showModal()" id="btn-noakhali" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <input id="feni-donate-field" class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
                         <!-- Error Message -->
                         <p id="error-feni" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
-                        <button id="btn-feni" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
+                        <button onclick="my_modal_1.showModal()" id="btn-feni" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                         <input id="quota-donate-field" class="p-4 border rounded-lg" type="text" placeholder="Write Donation Amount">
                         <!-- Error Message -->
                         <p id="error-quota" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
-                        <button id="btn-quota" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
+                        <button onclick="my_modal_1.showModal()" id="btn-quota" class="btn btn-lg bg-primary-color text-head-color">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -151,13 +151,13 @@
         <dialog id="my_modal_1" class="modal">
             <form method="dialog" class="modal-box px-5 py-10 flex flex-col justify-center items-center">
                 <h3 class="font-bold text-2xl text-head-color my-5">Congrates!</h3>
-                <div class="text-center">
+                <div class="text-center flex flex-col justify-center items-center space-y-4">
                     <img src="assets/coin.png" alt="">
                     <p class="font-bold">You Have Donated for Humankind</p>
                     <h3 class="font-bold text-xl text-head-color my-5">Successfully</h3>
                 </div>
                 <button id="btn-continue"
-                    class="btn bg-gray-400 px-16 btn-md hover:bg-black transition-colors ease-in duration-300 text-head-color">
+                    class="btn bg-gray-400 px-16 btn-md hover:bg-gray-200 transition-colors ease-in duration-300 text-head-color mt-4">
                     Close Confirmation
                 </button>
             </form>
