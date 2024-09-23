@@ -18,7 +18,6 @@ document.getElementById('btn-toggle').addEventListener('click', function(event) 
 });
 
 // get all the attr by id
-// const historyTab = document.getElementById('btn-history');
 const historyTab = getValueById('btn-history');
 const donationTab = getValueById('btn-donation');
 const fullForm = getValueById('full-form');
@@ -64,7 +63,6 @@ buttonNoakhali.addEventListener('click', function(event){
     <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
-    // const historyContainer = document.getElementById('add-history');
     historySection.appendChild(historyItem);
 });
 
@@ -101,7 +99,6 @@ buttonFeni.addEventListener('click', function(event){
     <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
-    // const historyContainer = document.getElementById('add-history');
     historySection.appendChild(historyItem);
 });
 
@@ -138,7 +135,6 @@ buttonQuota.addEventListener('click', function(event){
     <p class="bg-gray-50">Date: ${new Date().toString()}</p>
     `
 
-    // const historyContainer = document.getElementById('add-history');
     historySection.appendChild(historyItem);
 });
 
